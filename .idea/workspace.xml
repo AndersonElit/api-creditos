@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="Creacion modulo domain">
+      <change afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/values/CreditoId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateRoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/Identity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/ValueObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Asesor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/Banco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/Sexo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/TipoContrato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/TipoCuenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/TipoDireccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/TipoIdentificacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/enums/TipoTrabajo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Celular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Contacto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Contrato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Correo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/DatosBancarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Direccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Identificacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/InformacionAdicional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/InformacionBasica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/InformacionDemografica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/InformacionFinanciera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Nombre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/OficinaId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/Ubicacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/UsuarioId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/values/VinculacionId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2LcEbSGFzp5T9eDHZVH0aDPHHvB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "C:/Users/anderson.arrieta/Documents/apicreditos"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.apicreditos" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="" />
+      <created>1676162044848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676162044848</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Creacion modulo domain">
+      <created>1676164149724</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676164149724</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creacion modulo domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion modulo domain" />
+  </component>
+</project>
