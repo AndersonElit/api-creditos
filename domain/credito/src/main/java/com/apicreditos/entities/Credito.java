@@ -42,7 +42,7 @@ public class Credito extends AggregateRoot<CreditoId> {
     }
 
     private void calcularScore() {
-        Integer score = 0;
+        Double score = 0.0;
         if(score >= 70) {
             cambiarEstadoAprobado();
         } else {
@@ -69,8 +69,5 @@ public class Credito extends AggregateRoot<CreditoId> {
             throw new IllegalArgumentException("El credito no esta en estado aprobado.");
         }
     }
-
-
-
 
 }
