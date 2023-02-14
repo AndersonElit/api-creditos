@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="creacion casos de uso para vinculacion y credito.">
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="incluir escuchadores eventos 2.">
+      <change afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/gateways/CreditoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/gateways/VinculacionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoCreado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/VinculacionCreada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/CrearNuevoCreditoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/CrearNuevoCreditoUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/VincularClienteUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/VincularClienteUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Asesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Asesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Oficina.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Oficina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CapacidadEndeudamientoAnalizada.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CapacidadEndeudamientoAnalizada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CentralesDeRiesgoConsultadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CentralesDeRiesgoConsultadas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/HistorialCrediticioAnalizado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/HistorialCrediticioAnalizado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ValorPatrimonioDeterminado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ValorPatrimonioDeterminado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/VinculacionEventChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/VinculacionEventChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteCreado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteCreado.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +69,11 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.apicreditos.events" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.apicreditos.usecases" />
       <recent name="com.apicreditos" />
     </key>
   </component>
@@ -122,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676363693641</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="incluir escuchadores eventos.">
+      <created>1676381832894</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676381832894</updated>
+    </task>
+    <task id="LOCAL-00009" summary="incluir escuchadores eventos 2.">
+      <created>1676382043963</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676382043963</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +160,8 @@
     <MESSAGE value="ajuste vinculacion." />
     <MESSAGE value="inclusion event change para vinculacion y credito." />
     <MESSAGE value="creacion casos de uso para vinculacion y credito." />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion casos de uso para vinculacion y credito." />
+    <MESSAGE value="incluir escuchadores eventos." />
+    <MESSAGE value="incluir escuchadores eventos 2." />
+    <option name="LAST_COMMIT_MESSAGE" value="incluir escuchadores eventos 2." />
   </component>
 </project>

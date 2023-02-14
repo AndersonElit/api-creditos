@@ -3,9 +3,14 @@ package com.apicreditos.entities;
 import com.apicreditos.EventChange;
 import com.apicreditos.events.*;
 
+import java.time.LocalDate;
+
 public class CreditoEventChange extends EventChange {
 
     public CreditoEventChange(Credito credito) {
+        apply((CreditoCreado event) -> {
+            credito.fechaCreacion = LocalDate.now();
+        });
         apply((ClienteVinculado event) -> {
             credito.vinculacionId = event.getVinculacionId();
         });

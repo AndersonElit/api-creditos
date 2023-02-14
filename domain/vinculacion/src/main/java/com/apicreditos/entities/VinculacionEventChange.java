@@ -4,13 +4,18 @@ import com.apicreditos.EventChange;
 import com.apicreditos.events.AsesorAsignado;
 import com.apicreditos.events.ClienteCreado;
 import com.apicreditos.events.OficinaAsignada;
+import com.apicreditos.events.VinculacionCreada;
+
+import java.time.LocalDate;
 
 public class VinculacionEventChange extends EventChange {
 
     public VinculacionEventChange(Vinculacion vinculacion) {
+        apply((VinculacionCreada event) -> {
+            vinculacion.fechaViculacion = LocalDate.now();
+        });
         apply((ClienteCreado event) -> {
             vinculacion.cliente = event.getCliente();
-            vinculacion.fechaViculacion = event.getFechaVinculacion();
         });
         apply((AsesorAsignado event) -> {
             vinculacion.asesor = event.getAsesor();

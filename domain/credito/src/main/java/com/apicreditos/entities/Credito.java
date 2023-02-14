@@ -1,16 +1,18 @@
 package com.apicreditos.entities;
 
 import com.apicreditos.AggregateRoot;
-import com.apicreditos.command.VincularCliente;
 import com.apicreditos.enums.EstadoCredito;
 import com.apicreditos.events.*;
 import com.apicreditos.values.*;
+
+import java.time.LocalDate;
 
 public class Credito extends AggregateRoot<CreditoId> {
 
     protected VinculacionId vinculacionId;
     protected InformacionCreditoAprobado informacionCreditoAprobado;
     protected EstadoCredito estadoCredito;
+    protected LocalDate fechaCreacion;
 
     private Credito(CreditoId id) {
         super(id);
@@ -24,39 +26,37 @@ public class Credito extends AggregateRoot<CreditoId> {
 
     public Credito(CreditoId id, VinculacionId vinculacionId, InformacionCreditoAprobado informacionCreditoAprobado, EstadoCredito estadoCredito) {
         super(id);
-        this.vinculacionId = vinculacionId;
-        this.informacionCreditoAprobado = informacionCreditoAprobado;
-        this.estadoCredito = estadoCredito;
         subscribe(new CreditoEventChange(this));
+        appendChange(new CreditoCreado(this.fechaCreacion)).apply();
     }
 
-    private void vincularCliente(VinculacionId vinculacionId) {
+    public void vincularCliente(VinculacionId vinculacionId) {
         this.estadoCredito = EstadoCredito.VINCULACIONCLIENTE;
         this.vinculacionId = vinculacionId;
         appendChange(new ClienteVinculado(vinculacionId)).apply();
     }
 
-    private void analizarHistorialCrediticio(Identificacion identificacion) {
+    public void analizarHistorialCrediticio() {
         cambiarEstadoEnAnalisis();
-        //appendChange(new HistorialCrediticioAnalizado(this.estadoCredito, ));
+        appendChange(new HistorialCrediticioAnalizado(this.estadoCredito)).apply();
     }
 
-    private void capacidadEndeudamiento(InformacionFinanciera informacionFinanciera) {
+    public void capacidadEndeudamiento() {
         cambiarEstadoEnAnalisis();
-        //appendChange(new CapacidadEndeudamientoAnalizada(this.estadoCredito, ));
+        appendChange(new CapacidadEndeudamientoAnalizada(this.estadoCredito)).apply();
     }
 
-    private void valorPatrimonio() {
+    public void valorPatrimonio() {
         cambiarEstadoEnAnalisis();
-        //appendChange(new ValorPatrimonioDeterminado(this.estadoCredito, ));
+        appendChange(new ValorPatrimonioDeterminado(this.estadoCredito)).apply();
     }
 
-    private void consultaCentralesDeRiesgo(Identificacion identificacion) {
+    public void consultaCentralesDeRiesgo() {
         cambiarEstadoEnAnalisis();
-        //appendChange(new CentralesDeRiesgoConsultadas(this.estadoCredito, ));
+        appendChange(new CentralesDeRiesgoConsultadas(this.estadoCredito)).apply();
     }
 
-    private void calcularScore() {
+    public void calcularScore() {
         Double score = 0.0;
         if(score >= 70) {
             cambiarEstadoAprobado();

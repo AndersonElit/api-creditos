@@ -1,13 +1,24 @@
-package com.apicreditos;
+package com.apicreditos.usecases;
 
+import com.apicreditos.Command;
+import com.apicreditos.DomainEvent;
+import com.apicreditos.UseCaseForCommand;
 import com.apicreditos.command.CrearNuevoCredito;
 import com.apicreditos.entities.Credito;
+import com.apicreditos.gateways.CreditoRepository;
 import com.apicreditos.values.CreditoId;
 import com.apicreditos.values.VinculacionId;
 
 import java.util.List;
 
-public class CrearNuevoCreditoUseCase implements UseCaseForCommand{
+public class CrearNuevoCreditoUseCase implements UseCaseForCommand {
+
+    private final CreditoRepository repository;
+
+    public CrearNuevoCreditoUseCase(CreditoRepository repository) {
+        this.repository = repository;
+    }
+
 
     @Override
     public List<DomainEvent> apply(Command command) {
@@ -18,7 +29,9 @@ public class CrearNuevoCreditoUseCase implements UseCaseForCommand{
                 crearNuevoCredito.getInformacionCreditoAprobado(),
                 crearNuevoCredito.getEstadoCredito()
         );
-        return credito.getUncommittedChanges();
+        return credito.getUncommittedChanges().stream().map(event -> {
+            return repository.crearNuevoCreditoNoReactivo(event);
+        }).toList();
     }
 
 }

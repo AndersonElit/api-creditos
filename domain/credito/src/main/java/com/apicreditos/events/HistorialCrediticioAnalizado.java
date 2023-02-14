@@ -5,20 +5,14 @@ import com.apicreditos.enums.EstadoCredito;
 
 public class HistorialCrediticioAnalizado extends DomainEvent {
     private final EstadoCredito estadoCredito;
-    private final Double score;
 
-    public HistorialCrediticioAnalizado(EstadoCredito estadoCredito, Double score) {
+    public HistorialCrediticioAnalizado(EstadoCredito estadoCredito) {
         super("HistorialCrediticioAnalizado");
         this.estadoCredito = estadoCredito;
-        this.score = score;
     }
 
     public EstadoCredito getEstadoCredito() {
         return estadoCredito;
-    }
-
-    public Double getScore() {
-        return score;
     }
 
 }

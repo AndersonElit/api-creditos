@@ -1,10 +1,10 @@
 package com.apicreditos.entities;
 
 import com.apicreditos.AggregateEvent;
-import com.apicreditos.AggregateRoot;
 import com.apicreditos.events.AsesorAsignado;
 import com.apicreditos.events.ClienteCreado;
 import com.apicreditos.events.OficinaAsignada;
+import com.apicreditos.events.VinculacionCreada;
 import com.apicreditos.values.VinculacionId;
 
 import java.time.LocalDate;
@@ -15,16 +15,10 @@ public class Vinculacion extends AggregateEvent<VinculacionId> {
     protected Oficina oficina;
     protected LocalDate fechaViculacion;
 
-    public Vinculacion(VinculacionId entityId, Cliente cliente, Asesor asesor, Oficina oficina, LocalDate fechaViculacion) {
+    public Vinculacion(VinculacionId entityId, Cliente cliente, Asesor asesor, Oficina oficina) {
         super(entityId);
-        this.cliente = cliente;
-        this.asesor = asesor;
-        this.oficina = oficina;
-        this.fechaViculacion = fechaViculacion;
-        crearCliente(cliente);
-        asignarAsesor(asesor);
-        asignarOficina(oficina);
         subscribe(new VinculacionEventChange(this));
+        appendChange(new VinculacionCreada(this.fechaViculacion)).apply();
     }
 
     public Vinculacion(VinculacionId entityId, Cliente cliente, LocalDate fechaViculacion) {
@@ -42,15 +36,15 @@ public class Vinculacion extends AggregateEvent<VinculacionId> {
         this.asesor = asesor;
     }
 
-    private void crearCliente(Cliente cliente) {
-        appendChange(new ClienteCreado(cliente, fechaViculacion)).apply();
+    public void crearCliente(Cliente cliente) {
+        appendChange(new ClienteCreado(cliente)).apply();
     }
 
-    private void asignarAsesor(Asesor asesor) {
+    public void asignarAsesor(Asesor asesor) {
         appendChange(new AsesorAsignado(asesor)).apply();
     }
 
-    private void asignarOficina(Oficina oficina) {
+    public void asignarOficina(Oficina oficina) {
         appendChange(new OficinaAsignada(oficina)).apply();
     }
 
