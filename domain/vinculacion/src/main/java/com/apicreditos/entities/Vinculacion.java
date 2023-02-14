@@ -43,15 +43,15 @@ public class Vinculacion extends AggregateEvent<VinculacionId> {
     }
 
     private void crearCliente(Cliente cliente) {
-        appendChange(new ClienteCreado(cliente, fechaViculacion));
+        appendChange(new ClienteCreado(cliente, fechaViculacion)).apply();
     }
 
     private void asignarAsesor(Asesor asesor) {
-        appendChange(new AsesorAsignado(asesor));
+        appendChange(new AsesorAsignado(asesor)).apply();
     }
 
     private void asignarOficina(Oficina oficina) {
-        appendChange(new OficinaAsignada(oficina));
+        appendChange(new OficinaAsignada(oficina)).apply();
     }
 
 }

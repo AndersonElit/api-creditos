@@ -33,7 +33,7 @@ public class Credito extends AggregateRoot<CreditoId> {
     private void vincularCliente(VinculacionId vinculacionId) {
         this.estadoCredito = EstadoCredito.VINCULACIONCLIENTE;
         this.vinculacionId = vinculacionId;
-        appendChange(new ClienteVinculado(vinculacionId));
+        appendChange(new ClienteVinculado(vinculacionId)).apply();
     }
 
     private void analizarHistorialCrediticio(Identificacion identificacion) {
@@ -60,10 +60,10 @@ public class Credito extends AggregateRoot<CreditoId> {
         Double score = 0.0;
         if(score >= 70) {
             cambiarEstadoAprobado();
-            appendChange(new ScoreCalculado(this.estadoCredito, score));
+            appendChange(new ScoreCalculado(this.estadoCredito, score)).apply();
         } else {
             cambiarEstadoRechazado();
-            appendChange(new ScoreCalculado(this.estadoCredito, score));
+            appendChange(new ScoreCalculado(this.estadoCredito, score)).apply();
         }
     }
 
