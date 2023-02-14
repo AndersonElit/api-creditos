@@ -1,18 +1,27 @@
 package com.apicreditos.events;
 
 import com.apicreditos.DomainEvent;
+import com.apicreditos.entities.Cliente;
+
+import java.time.LocalDate;
 
 public class ClienteCreado extends DomainEvent {
 
-    private final String idCliente;
+    private final Cliente cliente;
+    private final LocalDate fechaVinculacion;
 
-    public ClienteCreado(String idCliente) {
-        super("");
-        this.idCliente = idCliente;
+    public ClienteCreado(Cliente cliente, LocalDate fechaVinculacion) {
+        super("ClienteCreado");
+        this.cliente = cliente;
+        this.fechaVinculacion = fechaVinculacion;
     }
 
-    public String getIdCliente() {
-        return idCliente;
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public LocalDate getFechaVinculacion() {
+        return fechaVinculacion;
     }
 
 }

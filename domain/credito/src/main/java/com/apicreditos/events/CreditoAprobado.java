@@ -1,43 +1,33 @@
 package com.apicreditos.events;
 
 import com.apicreditos.DomainEvent;
+import com.apicreditos.enums.EstadoCredito;
+import com.apicreditos.values.InformacionCreditoAprobado;
 
 import java.time.LocalDate;
 
 public class CreditoAprobado extends DomainEvent {
-    private final String clienteId;
-    private final String asesorId;
-    private final String montoAprobado;
-    private final Integer numeroCuotas;
-    private final LocalDate fechaPagoPrimeraCuota;
+    private final EstadoCredito estadoCredito;
+    private final Double score;
+    private final InformacionCreditoAprobado informacionCreditoAprobado;
 
-    public CreditoAprobado(String type, String clienteId, String asesorId, String montoAprobado, Integer numeroCuotas, LocalDate fechaPagoPrimeraCuota) {
-        super(type);
-        this.clienteId = clienteId;
-        this.asesorId = asesorId;
-        this.montoAprobado = montoAprobado;
-        this.numeroCuotas = numeroCuotas;
-        this.fechaPagoPrimeraCuota = fechaPagoPrimeraCuota;
+    public CreditoAprobado(EstadoCredito estadoCredito, Double score, InformacionCreditoAprobado informacionCreditoAprobado) {
+        super("CreditoAprobado");
+        this.estadoCredito = estadoCredito;
+        this.score = score;
+        this.informacionCreditoAprobado = informacionCreditoAprobado;
     }
 
-    public String getClienteId() {
-        return clienteId;
+    public EstadoCredito getEstadoCredito() {
+        return estadoCredito;
     }
 
-    public String getAsesorId() {
-        return asesorId;
+    public Double getScore() {
+        return score;
     }
 
-    public String getMontoAprobado() {
-        return montoAprobado;
-    }
-
-    public Integer getNumeroCuotas() {
-        return numeroCuotas;
-    }
-
-    public LocalDate getFechaPagoPrimeraCuota() {
-        return fechaPagoPrimeraCuota;
+    public InformacionCreditoAprobado getInformacionCreditoAprobado() {
+        return informacionCreditoAprobado;
     }
 
 }

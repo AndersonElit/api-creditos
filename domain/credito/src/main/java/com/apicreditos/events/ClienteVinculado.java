@@ -1,23 +1,19 @@
 package com.apicreditos.events;
 
 import com.apicreditos.DomainEvent;
+import com.apicreditos.entities.Cliente;
+import com.apicreditos.values.VinculacionId;
 
 public class ClienteVinculado extends DomainEvent {
-    private final String vinculacionId;
-    private final String clienteId;
+    private final VinculacionId vinculacionId;
 
-    public ClienteVinculado(String type, String vinculacionId, String clienteId) {
-        super(type);
+    public ClienteVinculado(VinculacionId vinculacionId) {
+        super("ClienteVinculado");
         this.vinculacionId = vinculacionId;
-        this.clienteId = clienteId;
     }
 
-    public String getVinculacionId() {
+    public VinculacionId getVinculacionId() {
         return vinculacionId;
-    }
-
-    public String getClienteId() {
-        return clienteId;
     }
 
 }

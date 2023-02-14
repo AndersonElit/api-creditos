@@ -1,23 +1,18 @@
 package com.apicreditos.events;
 
 import com.apicreditos.DomainEvent;
+import com.apicreditos.entities.Asesor;
 
 public class AsesorAsignado extends DomainEvent {
-    private final String IdAsesor;
-    private final String idCliente;
+    private final Asesor asesor;
 
-    public AsesorAsignado( String idAsesor, String idCliente) {
-        super("");
-        IdAsesor = idAsesor;
-        this.idCliente = idCliente;
+    public AsesorAsignado(Asesor asesor) {
+        super("AsesorAsignado");
+        this.asesor = asesor;
     }
 
-    public String getIdAsesor() {
-        return IdAsesor;
-    }
-
-    public String getIdCliente() {
-        return idCliente;
+    public Asesor getAsesor() {
+        return asesor;
     }
 
 }

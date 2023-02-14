@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="creacion command y events para vinculacion y credito.">
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="ajuste vinculacion.">
+      <change afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/VinculacionEventChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CapacidadEndeudamientoAnalizada.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CapacidadEndeudamientoAnalizada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CentralesDeRiesgoConsultadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CentralesDeRiesgoConsultadas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ClienteVinculado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ClienteVinculado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoAprobado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoAprobado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoRechazado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoRechazado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/HistorialCrediticioAnalizado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/HistorialCrediticioAnalizado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ScoreCalculado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ScoreCalculado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ValorPatrimonioDeterminado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ValorPatrimonioDeterminado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/AsesorAsignado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/AsesorAsignado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteCreado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteCreado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/OficinaAsignada.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/OficinaAsignada.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +53,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/anderson.arrieta/Documents/apicreditos&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "C:/Users/anderson.arrieta/Documents/apicreditos"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.apicreditos" />
@@ -90,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676237457887</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ajuste vinculacion.">
+      <created>1676267502221</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676267502221</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -98,6 +118,7 @@
     <MESSAGE value="construccion agredado vinculacion, empece sesion credito" />
     <MESSAGE value="adicion acciones credito." />
     <MESSAGE value="creacion command y events para vinculacion y credito." />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion command y events para vinculacion y credito." />
+    <MESSAGE value="ajuste vinculacion." />
+    <option name="LAST_COMMIT_MESSAGE" value="ajuste vinculacion." />
   </component>
 </project>

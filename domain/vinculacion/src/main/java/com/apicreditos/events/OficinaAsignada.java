@@ -1,23 +1,19 @@
 package com.apicreditos.events;
 
 import com.apicreditos.DomainEvent;
+import com.apicreditos.entities.Oficina;
 
 public class OficinaAsignada extends DomainEvent {
-    private final String idOficina;
-    private final String idCliente;
 
-    public OficinaAsignada(String idOficina, String idCliente) {
-        super("");
-        this.idOficina = idOficina;
-        this.idCliente = idCliente;
+    private final Oficina oficina;
+
+    public OficinaAsignada(Oficina oficina) {
+        super("OficinaAsignada");
+        this.oficina = oficina;
     }
 
-    public String getIdOficina() {
-        return idOficina;
-    }
-
-    public String getIdCliente() {
-        return idCliente;
+    public Oficina getOficina() {
+        return oficina;
     }
 
 }
