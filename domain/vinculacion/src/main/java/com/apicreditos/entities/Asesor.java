@@ -5,7 +5,7 @@ import com.apicreditos.values.*;
 
 public class Asesor extends Usuario {
 
-    private final Contrato contrato;
+    private Contrato contrato;
 
     public Asesor(UsuarioId id, InformacionBasica informacionBasica, InformacionDemografica informacionDemografica, InformacionAdicional informacionAdicional,
                   Contacto contacto, Estado estado, Contrato contrato) {
@@ -13,4 +13,7 @@ public class Asesor extends Usuario {
         this.contrato = contrato;
     }
 
+    public Asesor(UsuarioId id) {
+        super(id);
+    }
 }

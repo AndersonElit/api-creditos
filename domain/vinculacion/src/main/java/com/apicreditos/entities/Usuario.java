@@ -21,6 +21,10 @@ public class Usuario extends Entity<UsuarioId> {
         this.estado = estado;
     }
 
+    public Usuario(UsuarioId id) {
+        super(id);
+    }
+
     public InformacionBasica informacionBasica() {
         return informacionBasica;
     }

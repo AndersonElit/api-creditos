@@ -2,7 +2,7 @@ package com.apicreditos;
 
 public abstract class Entity<I extends Identity> {
 
-    private final I id;
+    protected I id;
 
     protected Entity(I id) {
         this.id = id;

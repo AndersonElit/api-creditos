@@ -23,7 +23,7 @@ public abstract class AggregateRoot<I extends Identity> extends Entity<I> {
         return List.copyOf(changeEventSubscriber.changes());
     }
 
-    protected final void subscribe(EventChange eventChange) {
+    protected void subscribe(EventChange eventChange) {
         changeEventSubscriber.subscribe(eventChange);
     }
 

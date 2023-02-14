@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/apicreditos.iml" filepath="$PROJECT_DIR$/apicreditos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business.iml" filepath="$PROJECT_DIR$/business.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
     </modules>
   </component>

@@ -25,6 +25,13 @@ public class Credito extends AggregateRoot<CreditoId> {
         this.vinculacionId = vinculacionId;
     }
 
+    public Credito(CreditoId id, VinculacionId vinculacionId, InformacionCreditoAprobado informacionCreditoAprobado, EstadoCredito estadoCredito) {
+        super(id);
+        this.vinculacionId = vinculacionId;
+        this.informacionCreditoAprobado = informacionCreditoAprobado;
+        this.estadoCredito = estadoCredito;
+    }
+
     private void analizarHistorialCrediticio(Identificacion identificacion) {
         cambiarEstadoEnAnalisis();
     }

@@ -4,22 +4,100 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="ajuste vinculacion.">
-      <change afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/VinculacionEventChange.java" afterDir="false" />
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="inclusion event change para vinculacion y credito.">
+      <change afterPath="$PROJECT_DIR$/business.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/CrearNuevoCreditoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/generic/src/main/java/com/apicreditos/UseCaseForCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/VincularClienteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/command/VincularCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_23_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_6_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apicreditos.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/AnalizarHistorialCrediticioCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/CalcularScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/ConsultarCentralesDeRiesgo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/DeterminarCapacidadEndeudamiento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/DeterminarValorPatrimonio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/VincularClienteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/CrearNuevoCredito.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CapacidadEndeudamientoAnalizada.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CapacidadEndeudamientoAnalizada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CentralesDeRiesgoConsultadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CentralesDeRiesgoConsultadas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ClienteVinculado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ClienteVinculado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoAprobado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoAprobado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoRechazado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoRechazado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/HistorialCrediticioAnalizado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/HistorialCrediticioAnalizado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ScoreCalculado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ScoreCalculado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ValorPatrimonioDeterminado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/ValorPatrimonioDeterminado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/AsesorAsignado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/AsesorAsignado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteCreado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteCreado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/OficinaAsignada.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/OficinaAsignada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/domain/domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/command/AsignarAsesor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/command/AsignarOficina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/command/CrearCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Asesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Asesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +107,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -47,6 +125,11 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2LcEbSGFzp5T9eDHZVH0aDPHHvB" />
   <component name="ProjectViewState">
@@ -57,6 +140,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "last_opened_file_path": "C:/Users/anderson.arrieta/Documents/apicreditos"
   }
@@ -110,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676267502221</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="inclusion event change para vinculacion y credito.">
+      <created>1676349942891</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676349942891</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -119,6 +210,7 @@
     <MESSAGE value="adicion acciones credito." />
     <MESSAGE value="creacion command y events para vinculacion y credito." />
     <MESSAGE value="ajuste vinculacion." />
-    <option name="LAST_COMMIT_MESSAGE" value="ajuste vinculacion." />
+    <MESSAGE value="inclusion event change para vinculacion y credito." />
+    <option name="LAST_COMMIT_MESSAGE" value="inclusion event change para vinculacion y credito." />
   </component>
 </project>
