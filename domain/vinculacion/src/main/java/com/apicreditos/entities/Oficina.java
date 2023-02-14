@@ -20,4 +20,23 @@ public class Oficina extends Entity<OficinaId> {
         this.horarioAtencion = horarioAtencion;
     }
 
+    public Ubicacion ubicacion() {
+        return ubicacion;
+    }
+
+    public Direccion direccion() {
+        return direccion;
+    }
+
+    public Correo correo() {
+        return correo;
+    }
+
+    public Telefono telefono() {
+        return telefono;
+    }
+
+    public HorarioAtencion horarioAtencion() {
+        return horarioAtencion;
+    }
 }

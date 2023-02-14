@@ -16,4 +16,8 @@ public class Asesor extends Usuario {
     public Asesor(UsuarioId id) {
         super(id);
     }
+
+    public Contrato contrato() {
+        return contrato;
+    }
 }

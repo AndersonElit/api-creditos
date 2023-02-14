@@ -16,4 +16,8 @@ public class Cliente extends Usuario {
     public Cliente(UsuarioId id) {
         super(id);
     }
+
+    public InformacionFinanciera informacionFinanciera() {
+        return informacionFinanciera;
+    }
 }

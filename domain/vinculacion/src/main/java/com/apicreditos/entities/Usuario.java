@@ -39,22 +39,6 @@ public class Usuario extends Entity<UsuarioId> {
         return contacto;
     }
 
-    public void editarInformacionBasica(InformacionBasica informacionBasica) {
-        this.informacionBasica= informacionBasica;
-    }
-
-    public void editarInformacionDemografica(InformacionDemografica informacionDemografica) {
-        this.informacionDemografica = informacionDemografica;
-    }
-
-    public void editarInformacionAdicional(InformacionAdicional informacionAdicional) {
-        this.informacionAdicional = informacionAdicional;
-    }
-
-    public void editarContacto(Contacto contacto) {
-        this.contacto = contacto;
-    }
-
     public void cambiarEstadoActivo() {
         this.estado = Estado.ACTIVO;
     }
