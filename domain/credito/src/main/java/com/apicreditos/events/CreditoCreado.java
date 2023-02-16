@@ -1,20 +1,29 @@
 package com.apicreditos.events;
 
 import com.apicreditos.DomainEvent;
+import com.apicreditos.enums.EstadoCredito;
+import com.apicreditos.values.InformacionCreditoAprobado;
+import com.apicreditos.values.VinculacionId;
 
 import java.time.LocalDate;
 
 public class CreditoCreado extends DomainEvent {
 
-    private final LocalDate fechaCreacion;
+    private final VinculacionId vinculacionId;
+    private final EstadoCredito estadoCredito;
 
-    public CreditoCreado(LocalDate fechaCreacion) {
+    public CreditoCreado(VinculacionId vinculacionId, EstadoCredito estadoCredito) {
         super("CreditoCreado");
-        this.fechaCreacion = fechaCreacion;
+        this.vinculacionId = vinculacionId;
+        this.estadoCredito = estadoCredito;
     }
 
-    public LocalDate getFechaCreacion() {
-        return fechaCreacion;
+    public VinculacionId getVinculacionId() {
+        return vinculacionId;
+    }
+
+    public EstadoCredito getEstadoCredito() {
+        return estadoCredito;
     }
 
 }

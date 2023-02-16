@@ -4,14 +4,21 @@ import com.apicreditos.Command;
 import com.apicreditos.enums.EstadoCredito;
 import com.apicreditos.values.InformacionCreditoAprobado;
 
-public class CrearNuevoCredito extends Command {
+public class CrearNuevoCreditoCommand extends Command {
 
     private String creditoId;
     private String vinculacionId;
     private InformacionCreditoAprobado informacionCreditoAprobado;
     private EstadoCredito estadoCredito;
 
-    public CrearNuevoCredito() {
+    public CrearNuevoCreditoCommand() {
+    }
+
+    public CrearNuevoCreditoCommand(String creditoId, String vinculacionId, InformacionCreditoAprobado informacionCreditoAprobado, EstadoCredito estadoCredito) {
+        this.creditoId = creditoId;
+        this.vinculacionId = vinculacionId;
+        this.informacionCreditoAprobado = informacionCreditoAprobado;
+        this.estadoCredito = estadoCredito;
     }
 
     public String getCreditoId() {

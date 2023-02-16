@@ -20,6 +20,10 @@ public class Oficina extends Entity<OficinaId> {
         this.horarioAtencion = horarioAtencion;
     }
 
+    public Oficina(OficinaId id) {
+        super(id);
+    }
+
     public Ubicacion ubicacion() {
         return ubicacion;
     }

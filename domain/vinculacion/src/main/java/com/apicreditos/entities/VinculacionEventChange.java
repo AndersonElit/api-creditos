@@ -13,6 +13,9 @@ public class VinculacionEventChange extends EventChange {
     public VinculacionEventChange(Vinculacion vinculacion) {
         apply((VinculacionCreada event) -> {
             vinculacion.fechaViculacion = LocalDate.now();
+            vinculacion.cliente = event.getCliente();
+            vinculacion.asesor = event.getAsesor();
+            vinculacion.oficina = event.getOficina();
         });
         apply((ClienteCreado event) -> {
             vinculacion.cliente = event.getCliente();

@@ -5,16 +5,20 @@ import com.apicreditos.entities.Asesor;
 import com.apicreditos.entities.Cliente;
 import com.apicreditos.entities.Oficina;
 
-import java.time.LocalDate;
-
-public class VincularCliente extends Command {
+public class VincularClienteCommand extends Command {
     private String vinculacionId;
     private Cliente cliente;
     private Asesor asesor;
     private Oficina oficina;
-    private LocalDate fechaVinculacion;
 
-    public VincularCliente() {
+    public VincularClienteCommand() {
+    }
+
+    public VincularClienteCommand(String vinculacionId, Cliente cliente, Asesor asesor, Oficina oficina) {
+        this.vinculacionId = vinculacionId;
+        this.cliente = cliente;
+        this.asesor = asesor;
+        this.oficina = oficina;
     }
 
     public String getVinculacionId() {
@@ -49,11 +53,4 @@ public class VincularCliente extends Command {
         this.oficina = oficina;
     }
 
-    public LocalDate getFechaVinculacion() {
-        return fechaVinculacion;
-    }
-
-    public void setFechaVinculacion(LocalDate fechaVinculacion) {
-        this.fechaVinculacion = fechaVinculacion;
-    }
 }
