@@ -35,12 +35,16 @@ class VincularClienteUseCaseTest {
     @Test
     void apply() {
 
-        VincularClienteCommand command = new VincularClienteCommand("123456789", new Cliente(new UsuarioId("12345")),
-                new Asesor(new UsuarioId("6789")), new Oficina(new OficinaId("98765")));
+        String ID_VINCULACION = "id-vinculacion";
+        String ID_CLIENTE = "id-cliente";
+        String ID_ASESOR = "id-asesor";
+        String ID_OFICINA = "id-oficina";
 
-        VinculacionCreada event = new VinculacionCreada(new Cliente(new UsuarioId("12345")), new Asesor(new UsuarioId("6789")),
-                new Oficina(new OficinaId("98765")));
-        event.setAggregateRootId("123456789");
+        VincularClienteCommand command = new VincularClienteCommand(ID_VINCULACION, new Cliente(new UsuarioId(ID_CLIENTE)),
+                new Asesor(new UsuarioId(ID_ASESOR)), new Oficina(new OficinaId(ID_OFICINA)));
+
+        VinculacionCreada event = new VinculacionCreada();
+        event.setAggregateRootId(ID_VINCULACION);
 
         Mockito.when(repository.vincularClienteNoReactivo(ArgumentMatchers.any(VinculacionCreada.class)))
                 .thenAnswer(invocationOnMock -> {

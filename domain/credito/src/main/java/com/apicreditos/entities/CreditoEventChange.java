@@ -10,8 +10,6 @@ public class CreditoEventChange extends EventChange {
     public CreditoEventChange(Credito credito) {
         apply((CreditoCreado event) -> {
             credito.fechaCreacion = LocalDate.now();
-            credito.vinculacionId = event.getVinculacionId();
-            credito.estadoCredito = event.getEstadoCredito();
         });
         apply((ClienteVinculado event) -> {
             credito.vinculacionId = event.getVinculacionId();

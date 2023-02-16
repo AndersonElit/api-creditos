@@ -9,21 +9,7 @@ import java.time.LocalDate;
 
 public class CreditoCreado extends DomainEvent {
 
-    private final VinculacionId vinculacionId;
-    private final EstadoCredito estadoCredito;
-
-    public CreditoCreado(VinculacionId vinculacionId, EstadoCredito estadoCredito) {
+    public CreditoCreado() {
         super("CreditoCreado");
-        this.vinculacionId = vinculacionId;
-        this.estadoCredito = estadoCredito;
     }
-
-    public VinculacionId getVinculacionId() {
-        return vinculacionId;
-    }
-
-    public EstadoCredito getEstadoCredito() {
-        return estadoCredito;
-    }
-
 }

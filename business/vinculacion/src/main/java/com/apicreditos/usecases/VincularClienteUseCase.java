@@ -22,11 +22,11 @@ public class VincularClienteUseCase implements UseCaseForCommand {
     public List<DomainEvent> apply(Command command) {
         VincularClienteCommand vincularCliente = (VincularClienteCommand) command;
         Vinculacion vinculacion = new Vinculacion(
-                VinculacionId.of(vincularCliente.getVinculacionId()),
-                vincularCliente.getCliente(),
-                vincularCliente.getAsesor(),
-                vincularCliente.getOficina()
+                VinculacionId.of(vincularCliente.getVinculacionId())
         );
+        vinculacion.crearCliente(vincularCliente.getCliente());
+        vinculacion.asignarAsesor(vincularCliente.getAsesor());
+        vinculacion.asignarOficina(vincularCliente.getOficina());
         return vinculacion.getUncommittedChanges().stream().map(event -> {
             return repository.vincularClienteNoReactivo(event);
         }).toList();

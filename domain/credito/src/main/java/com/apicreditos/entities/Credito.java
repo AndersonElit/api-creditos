@@ -21,11 +21,11 @@ public class Credito extends AggregateRoot<CreditoId> {
     public Credito(CreditoId id, VinculacionId vinculacionId, EstadoCredito estadoCredito) {
         super(id);
         subscribe(new CreditoEventChange(this));
-        appendChange(new CreditoCreado(vinculacionId, estadoCredito)).apply();
+        appendChange(new CreditoCreado()).apply();
     }
 
-    public void vincularCliente() {
-        appendChange(new ClienteVinculado(new VinculacionId(), EstadoCredito.VINCULACIONCLIENTE)).apply();
+    public void vincularCliente(VinculacionId vinculacionId) {
+        appendChange(new ClienteVinculado(vinculacionId, EstadoCredito.VINCULACIONCLIENTE)).apply();
     }
 
     public void analizarHistorialCrediticio() {
@@ -45,8 +45,8 @@ public class Credito extends AggregateRoot<CreditoId> {
     }
 
     public void calcularScore() {
-        Double score = 0.0;
-        if(score >= 70) {
+        Double score = 75.0;
+        if(score >= 70.0) {
             appendChange(new ScoreCalculado(EstadoCredito.APROBADO, score)).apply();
             appendChange(new CreditoAprobado(EstadoCredito.APROBADO, score, new InformacionCreditoAprobado())).apply();
         } else {
@@ -54,15 +54,5 @@ public class Credito extends AggregateRoot<CreditoId> {
             appendChange(new CreditoRechazado(EstadoCredito.RECHAZADO, score)).apply();
         }
     }
-
-    public InformacionCreditoAprobado informacionCreditoAprobado() {
-        if(estadoCredito.compareTo(EstadoCredito.APROBADO) == 0) {
-            return informacionCreditoAprobado;
-        } else {
-            throw new IllegalArgumentException("El credito no esta en estado aprobado.");
-        }
-    }
-
-
 
 }

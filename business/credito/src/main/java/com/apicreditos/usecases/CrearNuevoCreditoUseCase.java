@@ -28,6 +28,12 @@ public class CrearNuevoCreditoUseCase implements UseCaseForCommand {
                 VinculacionId.of(crearNuevoCredito.getVinculacionId()),
                 crearNuevoCredito.getEstadoCredito()
         );
+        credito.vincularCliente(VinculacionId.of(crearNuevoCredito.getVinculacionId()));
+        credito.analizarHistorialCrediticio();
+        credito.capacidadEndeudamiento();
+        credito.valorPatrimonio();
+        credito.consultaCentralesDeRiesgo();
+        credito.calcularScore();
         return credito.getUncommittedChanges().stream().map(event -> {
             return repository.crearNuevoCreditoNoReactivo(event);
         }).toList();

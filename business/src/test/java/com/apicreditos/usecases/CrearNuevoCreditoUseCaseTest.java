@@ -36,11 +36,14 @@ class CrearNuevoCreditoUseCaseTest {
     @Test
     void apply() {
 
-        CrearNuevoCreditoCommand command = new CrearNuevoCreditoCommand("id-credito", "id-vinculacion", new InformacionCreditoAprobado(),
-                EstadoCredito.VINCULACIONCLIENTE);
+        String ID_CREDITO = "id-credito";
+        String ID_VINCULACION = "id-vinculacion";
 
-        CreditoCreado event = new CreditoCreado(new VinculacionId("id-vinculacion"), EstadoCredito.APROBADO);
-        event.setAggregateRootId("id-credito");
+        CrearNuevoCreditoCommand command = new CrearNuevoCreditoCommand(ID_CREDITO, ID_VINCULACION, new InformacionCreditoAprobado(),
+                EstadoCredito.INICIO);
+
+        CreditoCreado event = new CreditoCreado();
+        event.setAggregateRootId(ID_CREDITO);
 
         Mockito.when(repository.crearNuevoCreditoNoReactivo(ArgumentMatchers.any(CreditoCreado.class)))
                 .thenAnswer(invocationOnMock -> {
