@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="creacion pruebas unitarias casos de uso 2.">
-      <change afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/ConsultarCreditoUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/command/ConsultarCreditoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoConsultado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/gateways/CreditoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/gateways/CreditoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/CrearNuevoCreditoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/CrearNuevoCreditoUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearNuevoCreditoUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearNuevoCreditoUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/VincularClienteUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/VincularClienteUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/VincularClienteUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/VincularClienteUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/enums/EstadoCredito.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/enums/EstadoCredito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoCreado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoCreado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/VinculacionEventChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/VinculacionEventChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/VinculacionCreada.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/VinculacionCreada.java" afterDir="false" />
-    </list>
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="CORRECCION CASOS DE USO." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -254,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676521057380</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="CORRECCION CASOS DE USO.">
+      <created>1676584661790</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676584661790</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -270,7 +260,8 @@
     <MESSAGE value="correcciones domain events, inclusion interfaces Repository." />
     <MESSAGE value="creacion pruebas unitarias casos de uso." />
     <MESSAGE value="creacion pruebas unitarias casos de uso 2." />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion pruebas unitarias casos de uso 2." />
+    <MESSAGE value="CORRECCION CASOS DE USO." />
+    <option name="LAST_COMMIT_MESSAGE" value="CORRECCION CASOS DE USO." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
