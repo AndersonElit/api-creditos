@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="CORRECCION CASOS DE USO." />
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="CORRECCION CASOS DE USO 2.">
+      <change afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarClienteUseCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarCreditoUseCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/ConsultarClienteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/command/ConsultarClienteCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteConsultado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/ConsultarCreditoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/ConsultarCreditoUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/apicreditos/gateways/VinculacionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/apicreditos/gateways/VinculacionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/apicreditos/usecases/ConsultarCreditoUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/apicreditos/usecases/ConsultarCreditoUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/gateways/VinculacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/gateways/VinculacionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoConsultado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoConsultado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Credito.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Credito.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Vinculacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Vinculacion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/events/CreditoConsultado.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/events/CreditoConsultado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +32,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -51,7 +68,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/anderson.arrieta/Documents/liga_entrenamiento/alpha-posts-comments"
+    "last_opened_file_path": "C:/Users/anderson.arrieta/Documents/apicreditos"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -69,7 +86,39 @@
       <recent name="com.apicreditos.usecases" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CrearNuevoCreditoUseCaseTest.apply">
+  <component name="RunManager" selected="JUnit.ConsultarCreditoUseCaseTest.apply">
+    <configuration name="ConsultarClienteUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apicreditos.usecases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarClienteUseCaseTest" />
+      <option name="METHOD_NAME" value="apply" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsultarCreditoUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apicreditos.usecases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarCreditoUseCaseTest" />
+      <option name="METHOD_NAME" value="apply" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CrearNuevoCreditoUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business" />
       <extension name="coverage">
@@ -104,6 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConsultarCreditoUseCaseTest.apply" />
+        <item itemvalue="JUnit.ConsultarClienteUseCaseTest.apply" />
         <item itemvalue="JUnit.CrearNuevoCreditoUseCaseTest.apply" />
         <item itemvalue="JUnit.VincularClienteUseCaseTest.apply" />
       </list>
@@ -244,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676584661790</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="CORRECCION CASOS DE USO 2.">
+      <created>1676608835840</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676608835840</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -261,46 +319,12 @@
     <MESSAGE value="creacion pruebas unitarias casos de uso." />
     <MESSAGE value="creacion pruebas unitarias casos de uso 2." />
     <MESSAGE value="CORRECCION CASOS DE USO." />
-    <option name="LAST_COMMIT_MESSAGE" value="CORRECCION CASOS DE USO." />
+    <MESSAGE value="CORRECCION CASOS DE USO 2." />
+    <option name="LAST_COMMIT_MESSAGE" value="CORRECCION CASOS DE USO 2." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java</url>
           <line>10</line>

@@ -5,15 +5,8 @@ import com.apicreditos.entities.Credito;
 
 public class CreditoConsultado extends DomainEvent {
 
-    private final Credito credito;
-
-    public CreditoConsultado(Credito credito) {
+    public CreditoConsultado() {
         super("CreditoConsultado");
-        this.credito = credito;
-    }
-
-    public Credito getCredito() {
-        return credito;
     }
 
 }

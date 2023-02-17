@@ -1,11 +1,13 @@
 package com.apicreditos.entities;
 
 import com.apicreditos.AggregateRoot;
+import com.apicreditos.DomainEvent;
 import com.apicreditos.enums.EstadoCredito;
 import com.apicreditos.events.*;
 import com.apicreditos.values.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Credito extends AggregateRoot<CreditoId> {
 
@@ -16,6 +18,12 @@ public class Credito extends AggregateRoot<CreditoId> {
 
     private Credito(CreditoId id) {
         super(id);
+    }
+
+    public static Credito from(CreditoId creditoId, List<DomainEvent> events) {
+        var credito = new Credito(creditoId);
+        events.forEach(credito::applyEvent);
+        return credito;
     }
 
     public Credito(CreditoId id, VinculacionId vinculacionId, EstadoCredito estadoCredito) {
@@ -53,6 +61,10 @@ public class Credito extends AggregateRoot<CreditoId> {
             appendChange(new ScoreCalculado(EstadoCredito.RECHAZADO, score)).apply();
             appendChange(new CreditoRechazado(EstadoCredito.RECHAZADO, score)).apply();
         }
+    }
+
+    public void consultarCredito() {
+        appendChange(new CreditoConsultado()).apply();
     }
 
 }

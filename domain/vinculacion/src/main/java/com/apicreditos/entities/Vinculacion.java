@@ -2,10 +2,7 @@ package com.apicreditos.entities;
 
 import com.apicreditos.AggregateEvent;
 import com.apicreditos.DomainEvent;
-import com.apicreditos.events.AsesorAsignado;
-import com.apicreditos.events.ClienteCreado;
-import com.apicreditos.events.OficinaAsignada;
-import com.apicreditos.events.VinculacionCreada;
+import com.apicreditos.events.*;
 import com.apicreditos.values.VinculacionId;
 
 import java.time.LocalDate;
@@ -39,6 +36,10 @@ public class Vinculacion extends AggregateEvent<VinculacionId> {
 
     public void asignarOficina(Oficina oficina) {
         appendChange(new OficinaAsignada(oficina)).apply();
+    }
+
+    public void consultarCliente() {
+        appendChange(new ClienteConsultado()).apply();
     }
 
 }

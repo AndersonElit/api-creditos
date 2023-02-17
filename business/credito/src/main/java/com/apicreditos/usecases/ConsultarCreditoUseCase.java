@@ -3,7 +3,9 @@ package com.apicreditos.usecases;
 import com.apicreditos.DomainEvent;
 import com.apicreditos.UseCaseForCommand;
 import com.apicreditos.command.ConsultarCreditoCommand;
+import com.apicreditos.entities.Credito;
 import com.apicreditos.gateways.CreditoRepository;
+import com.apicreditos.values.CreditoId;
 
 import java.util.List;
 
@@ -17,7 +19,12 @@ public class ConsultarCreditoUseCase implements UseCaseForCommand<ConsultarCredi
 
     @Override
     public List<DomainEvent> apply(ConsultarCreditoCommand command) {
-        return null;
+
+        List<DomainEvent> events = repository.buscarPorIdNoReactivo(command.getCreditoId());
+        Credito credito = Credito.from(CreditoId.of(command.getCreditoId()), events);
+        credito.consultarCredito();
+        return credito.getUncommittedChanges();
+
     }
 
 }
