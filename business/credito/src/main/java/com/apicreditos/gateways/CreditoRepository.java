@@ -1,10 +1,10 @@
 package com.apicreditos.gateways;
 
 import com.apicreditos.DomainEvent;
-
-import java.util.List;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 public interface CreditoRepository {
-    DomainEvent crearNuevoCreditoNoReactivo(DomainEvent event);
-    List<DomainEvent> buscarPorIdNoReactivo(String agregateRootId);
+    Flux<DomainEvent> findById(String aggregateId);
+    Mono<DomainEvent> saveEvent(DomainEvent event);
 }

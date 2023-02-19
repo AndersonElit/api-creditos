@@ -4,9 +4,8 @@ import com.apicreditos.DomainEvent;
 import com.apicreditos.command.CrearNuevoCreditoCommand;
 import com.apicreditos.enums.EstadoCredito;
 import com.apicreditos.events.CreditoCreado;
-import com.apicreditos.gateways.CreditoRepository;
+import com.apicreditos.gateways.CreditoRepositoryNoReactivo;
 import com.apicreditos.values.InformacionCreditoAprobado;
-import com.apicreditos.values.VinculacionId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,19 +17,17 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @ExtendWith(MockitoExtension.class)
-class CrearNuevoCreditoUseCaseTest {
+class CrearNuevoCreditoUseCaseNoReactivoTest {
 
     @Mock
-    private CreditoRepository repository;
+    private CreditoRepositoryNoReactivo repository;
 
-    private CrearNuevoCreditoUseCase useCase;
+    private CrearNuevoCreditoUseCaseNoReactivo useCase;
 
     @BeforeEach
     void setUp() {
-        useCase = new CrearNuevoCreditoUseCase(repository);
+        useCase = new CrearNuevoCreditoUseCaseNoReactivo(repository);
     }
 
     @Test

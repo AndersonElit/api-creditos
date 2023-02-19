@@ -1,10 +1,10 @@
 package com.apicreditos;
 
-import com.apicreditos.Command;
-import com.apicreditos.DomainEvent;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-import java.util.List;
+import java.util.function.Function;
 
-public interface UseCaseForCommand<R extends Command> {
-    List<DomainEvent> apply(R command);
+public abstract class UseCaseForCommand<R extends Command> implements Function<Mono<R>, Flux<DomainEvent>> {
+    public abstract Flux<DomainEvent> apply(Mono<R> rMono);
 }

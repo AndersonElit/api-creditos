@@ -4,23 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="CORRECCION CASOS DE USO 2.">
-      <change afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarClienteUseCaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarCreditoUseCaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/ConsultarClienteUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/command/ConsultarClienteCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/events/ClienteConsultado.java" afterDir="false" />
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="test para casos de uso consultar.">
+      <change afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/gateways/CreditoRepositoryNoReactivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/ConsultarCreditoUseCaseNoReactivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/CrearNuevoCreditoUseCaseNoReactivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/generic/src/main/java/com/apicreditos/UseCaseForCommandNoReactivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearClienteUseCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/CrearClienteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/command/CrearClienteCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/gateways/CreditoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/gateways/CreditoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/ConsultarCreditoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/ConsultarCreditoUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/classes/com/apicreditos/gateways/VinculacionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/apicreditos/gateways/VinculacionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/classes/com/apicreditos/usecases/ConsultarCreditoUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/apicreditos/usecases/ConsultarCreditoUseCase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/gateways/VinculacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/gateways/VinculacionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/Credito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoConsultado.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/events/CreditoConsultado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Credito.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Credito.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Vinculacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/entities/Vinculacion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/events/CreditoConsultado.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/apicreditos/events/CreditoConsultado.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/CrearNuevoCreditoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/credito/src/main/java/com/apicreditos/usecases/CrearNuevoCreditoUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/generic/src/main/java/com/apicreditos/UseCaseForCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/generic/src/main/java/com/apicreditos/UseCaseForCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarClienteUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarClienteUseCaseNoReactivoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarCreditoUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarCreditoUseCaseNoReactivoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearNuevoCreditoUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearNuevoCreditoUseCaseNoReactivoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/VincularClienteUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/VincularClienteUseCaseNoReactivoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/VincularClienteUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/VincularClienteUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/ConsultarClienteUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/ConsultarClienteUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/VincularClienteUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/VincularClienteUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -86,8 +90,8 @@
       <recent name="com.apicreditos.usecases" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConsultarCreditoUseCaseTest.apply">
-    <configuration name="ConsultarClienteUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CrearClienteUseCaseTest.apply">
+    <configuration name="ConsultarClienteUseCaseNoReactivoTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business" />
       <extension name="coverage">
         <pattern>
@@ -96,14 +100,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarClienteUseCaseTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarClienteUseCaseNoReactivoTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultarCreditoUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConsultarCreditoUseCaseNoReactivoTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business" />
       <extension name="coverage">
         <pattern>
@@ -112,14 +116,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarCreditoUseCaseTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarCreditoUseCaseNoReactivoTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrearNuevoCreditoUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CrearClienteUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business" />
       <extension name="coverage">
         <pattern>
@@ -128,14 +132,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.CrearNuevoCreditoUseCaseTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.CrearClienteUseCaseTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VincularClienteUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CrearNuevoCreditoUseCaseNoReactivoTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business" />
       <extension name="coverage">
         <pattern>
@@ -144,7 +148,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.VincularClienteUseCaseTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.CrearNuevoCreditoUseCaseNoReactivoTest" />
+      <option name="METHOD_NAME" value="apply" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VincularClienteUseCaseNoReactivoTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apicreditos.usecases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.VincularClienteUseCaseNoReactivoTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -153,10 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConsultarCreditoUseCaseTest.apply" />
-        <item itemvalue="JUnit.ConsultarClienteUseCaseTest.apply" />
-        <item itemvalue="JUnit.CrearNuevoCreditoUseCaseTest.apply" />
-        <item itemvalue="JUnit.VincularClienteUseCaseTest.apply" />
+        <item itemvalue="JUnit.CrearClienteUseCaseTest.apply" />
+        <item itemvalue="JUnit.VincularClienteUseCaseNoReactivoTest.apply" />
+        <item itemvalue="JUnit.ConsultarCreditoUseCaseNoReactivoTest.apply" />
+        <item itemvalue="JUnit.ConsultarClienteUseCaseNoReactivoTest.apply" />
+        <item itemvalue="JUnit.CrearNuevoCreditoUseCaseNoReactivoTest.apply" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676608835840</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="test para casos de uso consultar.">
+      <created>1676612977347</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676612977347</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -320,7 +348,8 @@
     <MESSAGE value="creacion pruebas unitarias casos de uso 2." />
     <MESSAGE value="CORRECCION CASOS DE USO." />
     <MESSAGE value="CORRECCION CASOS DE USO 2." />
-    <option name="LAST_COMMIT_MESSAGE" value="CORRECCION CASOS DE USO 2." />
+    <MESSAGE value="test para casos de uso consultar." />
+    <option name="LAST_COMMIT_MESSAGE" value="test para casos de uso consultar." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -329,6 +358,86 @@
           <url>file://$PROJECT_DIR$/domain/credito/src/main/java/com/apicreditos/entities/CreditoEventChange.java</url>
           <line>10</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearClienteUseCaseTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/CrearClienteUseCase.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateRoot.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/ChangeEventSubscriber.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/Vinculacion.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/CrearClienteUseCase.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/CrearClienteUseCase.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/vinculacion/src/main/java/com/apicreditos/entities/VinculacionEventChange.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateEvent.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateRoot.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateEvent.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/generic/src/main/java/com/apicreditos/AggregateEvent.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/business/vinculacion/src/main/java/com/apicreditos/usecases/CrearClienteUseCase.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearClienteUseCaseTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearClienteUseCaseTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

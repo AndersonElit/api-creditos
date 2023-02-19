@@ -3,7 +3,7 @@ package com.apicreditos.usecases;
 import com.apicreditos.DomainEvent;
 import com.apicreditos.command.ConsultarCreditoCommand;
 import com.apicreditos.events.CreditoConsultado;
-import com.apicreditos.gateways.CreditoRepository;
+import com.apicreditos.gateways.CreditoRepositoryNoReactivo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,16 +15,16 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-class ConsultarCreditoUseCaseTest {
+class ConsultarCreditoUseCaseNoReactivoTest {
 
     @Mock
-    private CreditoRepository repository;
+    private CreditoRepositoryNoReactivo repository;
 
-    private ConsultarCreditoUseCase useCase;
+    private ConsultarCreditoUseCaseNoReactivo useCase;
 
     @BeforeEach
     void setUp() {
-        useCase = new ConsultarCreditoUseCase(repository);
+        useCase = new ConsultarCreditoUseCaseNoReactivo(repository);
     }
 
     @Test

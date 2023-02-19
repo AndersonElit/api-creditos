@@ -20,7 +20,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-class VincularClienteUseCaseTest {
+class VincularClienteUseCaseNoReactivoTest {
 
     @Mock
     private VinculacionRepository repository;
@@ -46,7 +46,7 @@ class VincularClienteUseCaseTest {
         VinculacionCreada event = new VinculacionCreada();
         event.setAggregateRootId(ID_VINCULACION);
 
-        Mockito.when(repository.vincularClienteNoReactivo(ArgumentMatchers.any(VinculacionCreada.class)))
+        Mockito.when(repository.vincularClienteNoReactivo(ArgumentMatchers.any()))
                 .thenAnswer(invocationOnMock -> {
                     return  invocationOnMock.getArgument(0);
                 });

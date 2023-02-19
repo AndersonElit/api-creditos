@@ -4,13 +4,13 @@ import com.apicreditos.Command;
 import com.apicreditos.DomainEvent;
 import com.apicreditos.command.VincularClienteCommand;
 import com.apicreditos.entities.Vinculacion;
-import com.apicreditos.UseCaseForCommand;
+import com.apicreditos.UseCaseForCommandNoReactivo;
 import com.apicreditos.gateways.VinculacionRepository;
 import com.apicreditos.values.VinculacionId;
 
 import java.util.List;
 
-public class VincularClienteUseCase implements UseCaseForCommand {
+public class VincularClienteUseCase implements UseCaseForCommandNoReactivo {
 
     private VinculacionRepository repository;
 
