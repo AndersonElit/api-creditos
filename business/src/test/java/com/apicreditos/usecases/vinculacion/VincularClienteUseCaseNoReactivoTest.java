@@ -1,4 +1,4 @@
-package com.apicreditos.usecases;
+package com.apicreditos.usecases.vinculacion;
 
 import com.apicreditos.DomainEvent;
 import com.apicreditos.command.VincularClienteCommand;
@@ -7,6 +7,7 @@ import com.apicreditos.entities.Cliente;
 import com.apicreditos.entities.Oficina;
 import com.apicreditos.events.VinculacionCreada;
 import com.apicreditos.gateways.VinculacionRepositoryNoReactivo;
+import com.apicreditos.usecases.VincularClienteUseCaseNoReactivo;
 import com.apicreditos.values.OficinaId;
 import com.apicreditos.values.UsuarioId;
 import org.junit.jupiter.api.Assertions;

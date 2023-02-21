@@ -1,9 +1,10 @@
-package com.apicreditos.usecases;
+package com.apicreditos.usecases.vinculacion;
 
 import com.apicreditos.DomainEvent;
 import com.apicreditos.entities.Cliente;
 import com.apicreditos.events.VinculacionCreada;
 import com.apicreditos.gateways.VinculacionRepository;
+import com.apicreditos.usecases.CrearClienteEventUseCase;
 import com.apicreditos.values.UsuarioId;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

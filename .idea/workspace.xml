@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="test casos de uso reactivos y caso de uso impulsado por eventos.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarClienteUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/ConsultarClienteUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearClienteEventUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearClienteEventUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearNuevoCreditoUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/CrearNuevoCreditoUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/VincularClienteUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/test/java/com/apicreditos/usecases/VincularClienteUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/CrearClienteEventUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/CrearClienteEventUseCaseTest.class" afterDir="false" />
+    <list default="true" id="bd94c6de-4879-4456-9179-eb4edd3e94b6" name="Changes" comment="correccion error casos de uso reactivos.">
+      <change beforePath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/ConsultarClienteUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/ConsultarClienteUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/CrearNuevoCreditoUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/CrearNuevoCreditoUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/VincularClienteUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/test-classes/com/apicreditos/usecases/VincularClienteUseCaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/anderson.arrieta/Documents/liga_entrenamiento/alpha-posts-comments"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anderson.arrieta/Documents/liga_entrenamiento/alpha-posts-comments&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.apicreditos.events" />
@@ -76,49 +73,33 @@
       <recent name="com.apicreditos.usecases" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VincularClienteUseCaseTest.apply">
-    <configuration name="ConsultarClienteUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConsultarClienteUseCaseNoReactivoTest.apply">
+    <configuration name="ConsultarClienteUseCaseNoReactivoTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.apicreditos.usecases.*" />
+          <option name="PATTERN" value="com.apicreditos.usecases.vinculacion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarClienteUseCaseTest" />
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases.vinculacion" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.vinculacion.ConsultarClienteUseCaseNoReactivoTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultarCreditoUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CrearClienteEventUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.apicreditos.usecases.*" />
+          <option name="PATTERN" value="com.apicreditos.usecases.vinculacion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.ConsultarCreditoUseCaseTest" />
-      <option name="METHOD_NAME" value="apply" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CrearClienteUseCaseTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="business" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apicreditos.usecases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.CrearClienteUseCaseTest" />
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases.vinculacion" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.vinculacion.CrearClienteEventUseCaseTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -129,12 +110,28 @@
       <module name="business" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.apicreditos.usecases.*" />
+          <option name="PATTERN" value="com.apicreditos.usecases.vinculacion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.CrearNuevoCreditoUseCaseTest" />
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases.credito" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.credito.CrearNuevoCreditoUseCaseTest" />
+      <option name="METHOD_NAME" value="apply" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VincularClienteUseCaseNoReactivoTest.apply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apicreditos.usecases.vinculacion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases.vinculacion" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.vinculacion.VincularClienteUseCaseNoReactivoTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -145,12 +142,12 @@
       <module name="business" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.apicreditos.usecases.*" />
+          <option name="PATTERN" value="com.apicreditos.usecases.vinculacion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.apicreditos.usecases" />
-      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.VincularClienteUseCaseTest" />
+      <option name="PACKAGE_NAME" value="com.apicreditos.usecases.vinculacion" />
+      <option name="MAIN_CLASS_NAME" value="com.apicreditos.usecases.vinculacion.VincularClienteUseCaseTest" />
       <option name="METHOD_NAME" value="apply" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -159,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConsultarClienteUseCaseNoReactivoTest.apply" />
+        <item itemvalue="JUnit.CrearClienteEventUseCaseTest.apply" />
         <item itemvalue="JUnit.VincularClienteUseCaseTest.apply" />
+        <item itemvalue="JUnit.VincularClienteUseCaseNoReactivoTest.apply" />
         <item itemvalue="JUnit.CrearNuevoCreditoUseCaseTest.apply" />
-        <item itemvalue="JUnit.ConsultarCreditoUseCaseTest.apply" />
-        <item itemvalue="JUnit.ConsultarClienteUseCaseTest.apply" />
-        <item itemvalue="JUnit.CrearClienteUseCaseTest.apply" />
       </list>
     </recent_temporary>
   </component>
@@ -330,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676945384612</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="correccion error casos de uso reactivos.">
+      <created>1676997665347</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676997665347</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -351,7 +355,8 @@
     <MESSAGE value="test para casos de uso consultar." />
     <MESSAGE value="casos de uso reactivos credito." />
     <MESSAGE value="test casos de uso reactivos y caso de uso impulsado por eventos." />
-    <option name="LAST_COMMIT_MESSAGE" value="test casos de uso reactivos y caso de uso impulsado por eventos." />
+    <MESSAGE value="correccion error casos de uso reactivos." />
+    <option name="LAST_COMMIT_MESSAGE" value="correccion error casos de uso reactivos." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

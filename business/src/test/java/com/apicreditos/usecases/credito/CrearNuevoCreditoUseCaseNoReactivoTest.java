@@ -1,10 +1,11 @@
-package com.apicreditos.usecases;
+package com.apicreditos.usecases.credito;
 
 import com.apicreditos.DomainEvent;
 import com.apicreditos.command.CrearNuevoCreditoCommand;
 import com.apicreditos.enums.EstadoCredito;
 import com.apicreditos.events.CreditoCreado;
-import com.apicreditos.gateways.CreditoRepository;
+import com.apicreditos.gateways.CreditoRepositoryNoReactivo;
+import com.apicreditos.usecases.CrearNuevoCreditoUseCaseNoReactivo;
 import com.apicreditos.values.InformacionCreditoAprobado;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,25 +15,25 @@ import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-import reactor.test.StepVerifier;
+
+import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-class CrearNuevoCreditoUseCaseTest {
+class CrearNuevoCreditoUseCaseNoReactivoTest {
 
     @Mock
-    private CreditoRepository repository;
+    private CreditoRepositoryNoReactivo repository;
 
-    private CrearNuevoCreditoUseCase useCase;
+    private CrearNuevoCreditoUseCaseNoReactivo useCase;
 
     @BeforeEach
     void setUp() {
-        useCase = new CrearNuevoCreditoUseCase(repository);
+        useCase = new CrearNuevoCreditoUseCaseNoReactivo(repository);
     }
 
     @Test
     void apply() {
+
         String ID_CREDITO = "id-credito";
         String ID_VINCULACION = "id-vinculacion";
 
@@ -42,14 +43,14 @@ class CrearNuevoCreditoUseCaseTest {
         CreditoCreado event = new CreditoCreado();
         event.setAggregateRootId(ID_CREDITO);
 
-        Mockito.when(repository.saveEvent(ArgumentMatchers.any(DomainEvent.class)))
-                .thenAnswer(invocationOnMock -> Mono.just(invocationOnMock.getArgument(0)));
+        Mockito.when(repository.crearNuevoCreditoNoReactivo(ArgumentMatchers.any(CreditoCreado.class)))
+                .thenAnswer(invocationOnMock -> {
+                    return invocationOnMock.getArgument(0);
+                });
 
-        Flux<DomainEvent> flux = useCase.apply(Mono.just(command));
+        List<DomainEvent> result = useCase.apply(command);
 
-        StepVerifier.create(flux)
-                .expectNextCount(8)
-                .verifyComplete();
+        Assertions.assertEquals(event.aggregateRootId(), result.get(0).aggregateRootId());
 
     }
 }

@@ -1,9 +1,10 @@
-package com.apicreditos.usecases;
+package com.apicreditos.usecases.credito;
 
 import com.apicreditos.DomainEvent;
 import com.apicreditos.command.ConsultarCreditoCommand;
 import com.apicreditos.events.CreditoConsultado;
 import com.apicreditos.gateways.CreditoRepositoryNoReactivo;
+import com.apicreditos.usecases.ConsultarCreditoUseCaseNoReactivo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
