@@ -5,9 +5,6 @@ import com.apicreditos.Command;
 public class ConsultarClienteCommand extends Command {
     private String vinculacionId;
 
-    public ConsultarClienteCommand() {
-    }
-
     public ConsultarClienteCommand(String vinculacionId) {
         this.vinculacionId = vinculacionId;
     }

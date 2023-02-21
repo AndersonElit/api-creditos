@@ -27,6 +27,12 @@ public class CrearNuevoCreditoUseCase extends UseCaseForCommand<CrearNuevoCredit
                     VinculacionId.of(command.getVinculacionId()),
                     command.getEstadoCredito()
             );
+            credito.vincularCliente(VinculacionId.of(command.getVinculacionId()));
+            credito.analizarHistorialCrediticio();
+            credito.capacidadEndeudamiento();
+            credito.valorPatrimonio();
+            credito.consultaCentralesDeRiesgo();
+            credito.calcularScore();
             return credito.getUncommittedChanges();
         }).flatMap(event -> repository.saveEvent(event));
 

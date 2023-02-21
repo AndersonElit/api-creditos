@@ -3,7 +3,7 @@ package com.apicreditos.usecases;
 import com.apicreditos.DomainEvent;
 import com.apicreditos.command.ConsultarClienteCommand;
 import com.apicreditos.events.ClienteConsultado;
-import com.apicreditos.gateways.VinculacionRepository;
+import com.apicreditos.gateways.VinculacionRepositoryNoReactivo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,13 +18,13 @@ import java.util.List;
 class ConsultarClienteUseCaseNoReactivoTest {
 
     @Mock
-    private VinculacionRepository repository;
+    private VinculacionRepositoryNoReactivo repository;
 
-    private ConsultarClienteUseCase useCase;
+    private ConsultarClienteUseCaseNoReactivo useCase;
 
     @BeforeEach
     void setUp() {
-        useCase = new ConsultarClienteUseCase(repository);
+        useCase = new ConsultarClienteUseCaseNoReactivo(repository);
     }
 
     @Test

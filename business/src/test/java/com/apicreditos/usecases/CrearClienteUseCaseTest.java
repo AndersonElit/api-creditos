@@ -4,7 +4,7 @@ import com.apicreditos.DomainEvent;
 import com.apicreditos.command.CrearClienteCommand;
 import com.apicreditos.entities.Cliente;
 import com.apicreditos.events.ClienteCreado;
-import com.apicreditos.gateways.VinculacionRepository;
+import com.apicreditos.gateways.VinculacionRepositoryNoReactivo;
 import com.apicreditos.values.UsuarioId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,7 +20,7 @@ import java.util.List;
 class CrearClienteUseCaseTest {
 
     @Mock
-    private VinculacionRepository repository;
+    private VinculacionRepositoryNoReactivo repository;
 
     private CrearClienteUseCase useCase;
 

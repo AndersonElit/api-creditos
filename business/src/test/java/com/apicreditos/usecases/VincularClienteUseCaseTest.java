@@ -6,7 +6,7 @@ import com.apicreditos.entities.Asesor;
 import com.apicreditos.entities.Cliente;
 import com.apicreditos.entities.Oficina;
 import com.apicreditos.events.VinculacionCreada;
-import com.apicreditos.gateways.VinculacionRepositoryNoReactivo;
+import com.apicreditos.gateways.VinculacionRepository;
 import com.apicreditos.values.OficinaId;
 import com.apicreditos.values.UsuarioId;
 import org.junit.jupiter.api.Assertions;
@@ -17,19 +17,23 @@ import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import java.util.List;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
-class VincularClienteUseCaseNoReactivoTest {
+class VincularClienteUseCaseTest {
 
     @Mock
-    private VinculacionRepositoryNoReactivo repository;
+    private VinculacionRepository repository;
 
-    private VincularClienteUseCaseNoReactivo useCase;
+    private VincularClienteUseCase useCase;
 
     @BeforeEach
     void setUp() {
-        useCase = new VincularClienteUseCaseNoReactivo(repository);
+        useCase = new VincularClienteUseCase(repository);
     }
 
     @Test
@@ -46,14 +50,18 @@ class VincularClienteUseCaseNoReactivoTest {
         VinculacionCreada event = new VinculacionCreada();
         event.setAggregateRootId(ID_VINCULACION);
 
-        Mockito.when(repository.vincularClienteNoReactivo(ArgumentMatchers.any()))
-                .thenAnswer(invocationOnMock -> {
-                    return  invocationOnMock.getArgument(0);
-                });
+        Mockito.when(repository.saveEvent(ArgumentMatchers.any()))
+                .thenAnswer(invocationOnMock -> Mono.just(invocationOnMock.getArgument(0)));
 
-        List<DomainEvent> result = useCase.apply(command);
+        Flux<DomainEvent> flux = useCase.apply(Mono.just(command));
 
-        Assertions.assertEquals(event.aggregateRootId(), result.get(0).aggregateRootId());
+        StepVerifier.create(flux)
+                .expectNextMatches(u -> {
+                    VinculacionCreada c = (VinculacionCreada) u;
+                    Assertions.assertEquals(c.aggregateRootId(), event.aggregateRootId());
+                    return u.aggregateRootId().equals(event.aggregateRootId());
+                })
+                .verifyComplete();
 
     }
 }
