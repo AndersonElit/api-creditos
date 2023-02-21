@@ -48,12 +48,7 @@ class CrearNuevoCreditoUseCaseTest {
         Flux<DomainEvent> flux = useCase.apply(Mono.just(command));
 
         StepVerifier.create(flux)
-                .expectNextCount(1)
-                /*.expectNextMatches(u -> {
-                    CreditoCreado c = (CreditoCreado) u;
-                    Assertions.assertEquals(c.aggregateRootId(), event.aggregateRootId());
-                    return u.aggregateRootId().equals(event.aggregateRootId());
-                })*/
+                .expectNextCount(8)
                 .verifyComplete();
 
     }

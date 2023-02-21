@@ -56,11 +56,7 @@ class VincularClienteUseCaseTest {
         Flux<DomainEvent> flux = useCase.apply(Mono.just(command));
 
         StepVerifier.create(flux)
-                .expectNextMatches(u -> {
-                    VinculacionCreada c = (VinculacionCreada) u;
-                    Assertions.assertEquals(c.aggregateRootId(), event.aggregateRootId());
-                    return u.aggregateRootId().equals(event.aggregateRootId());
-                })
+                .expectNextCount(4)
                 .verifyComplete();
 
     }

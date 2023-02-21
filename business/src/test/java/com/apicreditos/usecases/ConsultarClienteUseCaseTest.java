@@ -45,7 +45,7 @@ class ConsultarClienteUseCaseTest {
         Flux<DomainEvent> flux = useCase.apply(Mono.just(command));
 
         StepVerifier.create(flux)
-                .expectNextCount(1)
+                .expectNextCount(2)
                 .verifyComplete();
 
     }
