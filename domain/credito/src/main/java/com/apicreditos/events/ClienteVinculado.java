@@ -1,14 +1,23 @@
 package com.apicreditos.events;
 
 import com.apicreditos.DomainEvent;
+import com.apicreditos.entities.Cliente;
 import com.apicreditos.enums.EstadoCredito;
 import com.apicreditos.values.VinculacionId;
 
 public class ClienteVinculado extends DomainEvent {
-    private final VinculacionId vinculacionId;
-    private final EstadoCredito estadoCredito;
+    private VinculacionId vinculacionId;
+    private EstadoCredito estadoCredito;
+    private Cliente cliente;
 
-    public ClienteVinculado(VinculacionId vinculacionId, EstadoCredito estadoCredito) {
+    public ClienteVinculado(VinculacionId vinculacionId, EstadoCredito estadoCredito, Cliente cliente) {
+        super("ClienteVinculado");
+        this.vinculacionId = vinculacionId;
+        this.estadoCredito = estadoCredito;
+        this.cliente = cliente;
+    }
+
+    public ClienteVinculado( VinculacionId vinculacionId, EstadoCredito estadoCredito) {
         super("ClienteVinculado");
         this.vinculacionId = vinculacionId;
         this.estadoCredito = estadoCredito;
@@ -22,4 +31,7 @@ public class ClienteVinculado extends DomainEvent {
         return estadoCredito;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
 }

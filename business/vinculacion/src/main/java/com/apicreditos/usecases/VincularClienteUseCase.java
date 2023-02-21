@@ -28,7 +28,8 @@ public class VincularClienteUseCase extends UseCaseForCommand<VincularClienteCom
             vinculacion.asignarAsesor(command.getAsesor());
             vinculacion.asignarOficina(command.getOficina());
             return vinculacion.getUncommittedChanges();
-        }).flatMap(event -> repository.saveEvent(event));
+        }).flatMap(
+                event -> repository.saveEvent(event));
     }
 
 }

@@ -5,6 +5,7 @@ import com.apicreditos.command.VincularClienteCommand;
 import com.apicreditos.entities.Asesor;
 import com.apicreditos.entities.Cliente;
 import com.apicreditos.entities.Oficina;
+import com.apicreditos.events.ClienteCreado;
 import com.apicreditos.events.VinculacionCreada;
 import com.apicreditos.gateways.VinculacionRepository;
 import com.apicreditos.usecases.VincularClienteUseCase;
@@ -51,7 +52,7 @@ class VincularClienteUseCaseTest {
         VinculacionCreada event = new VinculacionCreada();
         event.setAggregateRootId(ID_VINCULACION);
 
-        Mockito.when(repository.saveEvent(ArgumentMatchers.any()))
+        Mockito.when(repository.saveEvent(ArgumentMatchers.any(DomainEvent.class)))
                 .thenAnswer(invocationOnMock -> Mono.just(invocationOnMock.getArgument(0)));
 
         Flux<DomainEvent> flux = useCase.apply(Mono.just(command));
