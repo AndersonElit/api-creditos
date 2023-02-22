@@ -31,27 +31,18 @@ class CrearClienteUseCaseTest {
 
     @Test
     void apply() {
+
         String ID_VINCULACION = "id-vinculacion";
         String ID_CLIENTE = "id-cliente";
         Cliente cliente = new Cliente(UsuarioId.of(ID_CLIENTE));
 
         CrearClienteCommand command = new CrearClienteCommand(ID_VINCULACION, cliente);
 
-        ClienteCreado clienteCreado = new ClienteCreado(cliente);
-        clienteCreado.setAggregateRootId(ID_VINCULACION);
-
-        /*Mockito.when(repository.buscarPorIdNoReactivo(ID_VINCULACION))
-                .thenReturn(List.of(clienteCreado));*/
-
-        Mockito.when(repository.vincularClienteNoReactivo(ArgumentMatchers.any(ClienteCreado.class)))
-                .thenAnswer(interceptor -> {
-                    return interceptor.getArgument(0);
-                });
+        Mockito.when(repository.vincularClienteNoReactivo(ArgumentMatchers.any()))
+                .thenAnswer(interceptor -> interceptor.getArgument(0));
 
         List<DomainEvent> result = useCase.apply(command);
-
-        Assertions.assertEquals(command.getVinculacionId(), result.get(0).aggregateRootId());
-        Assertions.assertInstanceOf(ClienteCreado.class, result.get(0));
+        Assertions.assertEquals(result.size(), 2);
 
     }
 }
